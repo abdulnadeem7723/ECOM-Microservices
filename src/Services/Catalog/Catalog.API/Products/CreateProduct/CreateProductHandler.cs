@@ -20,7 +20,7 @@ namespace Catalog.API.Products.CreateProduct
 
             session.Store(product);
             await session.SaveChangesAsync(token);
-            return new CreateProductResult(Guid.NewGuid());
+            return new CreateProductResult(product.Id);
 
         }
     };
