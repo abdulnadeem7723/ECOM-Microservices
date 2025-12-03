@@ -17,7 +17,7 @@ namespace BuildingBlocks.Exceptions.Handler
 
             (string Detail, string Title, int StatusCode) details = exception switch
             {
-                InternalServerException =>
+                InternalServerException => 
                 (
                     exception.Message,
                     exception.GetType().Name,
